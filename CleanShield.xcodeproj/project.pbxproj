@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B65834F35D540C840C5E0A19 /* app_res::Assets.xcassets */ = {isa = PBXBuildFile; fileRef = BECD89C5B4DC731E009D5F03; };
+		DE7E71C94BB982D3E411D1B0 /* app_res::InfoPlist.strings */ = {isa = PBXBuildFile; fileRef = E5F8EE8A5A54291A7BB971E3; };
+		C3A1117175ED7D7AD6C700E1 /* app_res::PrivacyInfo.xcprivacy */ = {isa = PBXBuildFile; fileRef = 3221D325F5A6DCA67804E682; };
+		CFD68B750907EFEFDA0EA698 /* app_src::Sources/AppState.swift */ = {isa = PBXBuildFile; fileRef = 994D2E699E467ACF0D6EA347; };
+		12BBAA120713F66789FE87BF /* app_src::Sources/AuditView.swift */ = {isa = PBXBuildFile; fileRef = 4116B51D9746D9EC867FF0DB; };
+		38749758E566B498CDD36F0A /* app_src::Sources/CleanShieldApp.swift */ = {isa = PBXBuildFile; fileRef = 09707D7F5ED9AB1CC3F7DDD7; };
+		7660015A69FF7CD2E9FC5D32 /* app_src::Sources/PaywallSheet.swift */ = {isa = PBXBuildFile; fileRef = 085F95956DA7A994A119B7A3; };
+		5431A953693880EBC67BE9A3 /* app_src::Sources/SafariShieldView.swift */ = {isa = PBXBuildFile; fileRef = 2FF514851E182F407EC11F73; };
+		91F014078FEAA1A523CE4554 /* app_src::Sources/Shared/AuditCatalog.swift */ = {isa = PBXBuildFile; fileRef = D987389DA2D00D8417986493; };
+		584B1232C3F0FD38B345BCEF /* app_src::Sources/Shared/BlockerRuleCompiler.swift */ = {isa = PBXBuildFile; fileRef = 98764518DEEC20F0555CC1E2; };
+		21FD2C670CF18A64A596D903 /* app_src::Sources/Shared/PhotoPrivacyScrubber.swift */ = {isa = PBXBuildFile; fileRef = 6534DDAE1E330F6C36F053A9; };
+		16F8FBC47618ABDC7533858A /* app_src::Sources/Shared/SharedModels.swift */ = {isa = PBXBuildFile; fileRef = 7F504D737C28861C2B26B618; };
+		A70FF372A8E11DC66DE46F35 /* app_src::Sources/StoreManager.swift */ = {isa = PBXBuildFile; fileRef = D592B6C79887020D414110F5; };
+		E5A5C6BB11728FA9F4D69EA4 /* app_src::Sources/ToolsView.swift */ = {isa = PBXBuildFile; fileRef = 8E74C64D015E81F701FFD8D5; };
+		F0F1FDCFFC56A6700BA95080 /* blocker_res::PrivacyInfo.xcprivacy */ = {isa = PBXBuildFile; fileRef = 3221D325F5A6DCA67804E682; };
+		164DE80C4438619059B6D7F6 /* blocker_res::blockerList.json */ = {isa = PBXBuildFile; fileRef = 0BBA467E673AF49AADCC0D8A; };
+		1F42FAAF2552196F6CA6879B /* blocker_src::BlockerExtension/ContentBlockerRequestHandler.swift */ = {isa = PBXBuildFile; fileRef = 7C37169EA0F0ABE4A6010075; };
+		8E6C53367E3E3D05B2C69F84 /* blocker_src::Sources/Shared/BlockerRuleCompiler.swift */ = {isa = PBXBuildFile; fileRef = 98764518DEEC20F0555CC1E2; };
+		238A548F34B8B42F17816379 /* blocker_src::Sources/Shared/SharedModels.swift */ = {isa = PBXBuildFile; fileRef = 7F504D737C28861C2B26B618; };
+		81774262CE2077333A33FB32 /* embed::CleanShieldBlocker.appex */ = {isa = PBXBuildFile; fileRef = BF19CD8CA40EB9FBA1B83737; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37265AF278ED59354B0B40B6 /* embed::CleanShieldWidgets.appex */ = {isa = PBXBuildFile; fileRef = 55E2E26C292A9A4CF2ADCB8E; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		15FC38805AD7164DAB7BFA51 /* test_res::CleanShield.storekit */ = {isa = PBXBuildFile; fileRef = 5A3D1A5BCCA683E45E365AF1; };
+		8F03F8A0E20FDD4233E55CD6 /* test_src::Tests/CleanShieldTests.swift */ = {isa = PBXBuildFile; fileRef = 092ABFC48BD6E2CF94323013; };
+		BB41A5EE842757540B1F7FC9 /* widget_res::PrivacyInfo.xcprivacy */ = {isa = PBXBuildFile; fileRef = 3221D325F5A6DCA67804E682; };
+		FE82BF892A285E3BB29E6163 /* widget_src::Sources/Shared/AuditCatalog.swift */ = {isa = PBXBuildFile; fileRef = D987389DA2D00D8417986493; };
+		25978583B531D267485A2A58 /* widget_src::Sources/Shared/SharedModels.swift */ = {isa = PBXBuildFile; fileRef = 7F504D737C28861C2B26B618; };
+		FF8193DB8416FCF7B930FD37 /* widget_src::Widgets/CleanShieldWidgets.swift */ = {isa = PBXBuildFile; fileRef = 29FBA42DC208E7453C9ED65E; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB763E7DC30EC9C9A32A669A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E597709257EEDF1E2DF71251;
+			proxyType = 1;
+			remoteGlobalIDString = B424062C580FD8AB3FE1428B;
+			remoteInfo = CleanShieldBlocker;
+		};
+		03B70AB1D64EBBD73FD8BA53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E597709257EEDF1E2DF71251;
+			proxyType = 1;
+			remoteGlobalIDString = 0D54080FDF1E4D248F51496E;
+			remoteInfo = CleanShieldWidgets;
+		};
+		5DAD052E7BA6DD021E22DAAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E597709257EEDF1E2DF71251;
+			proxyType = 1;
+			remoteGlobalIDString = 26317FB7B0BFF1C9F916BA84;
+			remoteInfo = CleanShield;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F681387E1DED57575C34BA4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				81774262CE2077333A33FB32 /* CleanShieldBlocker.appex */,
+				37265AF278ED59354B0B40B6 /* CleanShieldWidgets.appex */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E6B56320B278B456D87096E /* CleanShield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanShield.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF19CD8CA40EB9FBA1B83737 /* CleanShieldBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CleanShieldBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E2E26C292A9A4CF2ADCB8E /* CleanShieldWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CleanShieldWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ADBA66B679BFCF682ABDD4B /* CleanShieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanShieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C37169EA0F0ABE4A6010075 /* BlockerExtension/ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ContentBlockerRequestHandler.swift"; path = "BlockerExtension/ContentBlockerRequestHandler.swift"; sourceTree = SOURCE_ROOT; };
+		0BBA467E673AF49AADCC0D8A /* BlockerExtension/blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "blockerList.json"; path = "BlockerExtension/blockerList.json"; sourceTree = SOURCE_ROOT; };
+		AE8CFA038C41C0B43EC344A5 /* Config/Blocker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Blocker-Info.plist"; path = "Config/Blocker-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9A270BAD9DF77986D5BD27E8 /* Config/CleanShield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "CleanShield.entitlements"; path = "Config/CleanShield.entitlements"; sourceTree = SOURCE_ROOT; };
+		5A3D1A5BCCA683E45E365AF1 /* Config/CleanShield.storekit */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "CleanShield.storekit"; path = "Config/CleanShield.storekit"; sourceTree = SOURCE_ROOT; };
+		C1BC6C0E73FDBE64EAF6A402 /* Config/CleanShieldBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "CleanShieldBlocker.entitlements"; path = "Config/CleanShieldBlocker.entitlements"; sourceTree = SOURCE_ROOT; };
+		D7E5641B961B9710298B98D4 /* Config/CleanShieldWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "CleanShieldWidgets.entitlements"; path = "Config/CleanShieldWidgets.entitlements"; sourceTree = SOURCE_ROOT; };
+		7958A01042AB513569E303F7 /* Config/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Config/Info.plist"; sourceTree = SOURCE_ROOT; };
+		21DD12A2BC8BB6ED9D13AFBC /* Config/Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Widget-Info.plist"; path = "Config/Widget-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BECD89C5B4DC731E009D5F03 /* Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Assets.xcassets"; path = "Resources/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		3221D325F5A6DCA67804E682 /* Resources/PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "PrivacyInfo.xcprivacy"; path = "Resources/PrivacyInfo.xcprivacy"; sourceTree = SOURCE_ROOT; };
+		10C3F7F230FF37C74AB4A891 /* Resources/en.lproj/InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en"; path = "Resources/en.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
+		ABEE87EB562083D744113B79 /* Resources/zh-Hans.lproj/InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resources/zh-Hans.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
+		994D2E699E467ACF0D6EA347 /* Sources/AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppState.swift"; path = "Sources/AppState.swift"; sourceTree = SOURCE_ROOT; };
+		4116B51D9746D9EC867FF0DB /* Sources/AuditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AuditView.swift"; path = "Sources/AuditView.swift"; sourceTree = SOURCE_ROOT; };
+		09707D7F5ED9AB1CC3F7DDD7 /* Sources/CleanShieldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CleanShieldApp.swift"; path = "Sources/CleanShieldApp.swift"; sourceTree = SOURCE_ROOT; };
+		085F95956DA7A994A119B7A3 /* Sources/PaywallSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PaywallSheet.swift"; path = "Sources/PaywallSheet.swift"; sourceTree = SOURCE_ROOT; };
+		2FF514851E182F407EC11F73 /* Sources/SafariShieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SafariShieldView.swift"; path = "Sources/SafariShieldView.swift"; sourceTree = SOURCE_ROOT; };
+		D987389DA2D00D8417986493 /* Sources/Shared/AuditCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AuditCatalog.swift"; path = "Sources/Shared/AuditCatalog.swift"; sourceTree = SOURCE_ROOT; };
+		98764518DEEC20F0555CC1E2 /* Sources/Shared/BlockerRuleCompiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BlockerRuleCompiler.swift"; path = "Sources/Shared/BlockerRuleCompiler.swift"; sourceTree = SOURCE_ROOT; };
+		6534DDAE1E330F6C36F053A9 /* Sources/Shared/PhotoPrivacyScrubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PhotoPrivacyScrubber.swift"; path = "Sources/Shared/PhotoPrivacyScrubber.swift"; sourceTree = SOURCE_ROOT; };
+		7F504D737C28861C2B26B618 /* Sources/Shared/SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SharedModels.swift"; path = "Sources/Shared/SharedModels.swift"; sourceTree = SOURCE_ROOT; };
+		D592B6C79887020D414110F5 /* Sources/StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StoreManager.swift"; path = "Sources/StoreManager.swift"; sourceTree = SOURCE_ROOT; };
+		8E74C64D015E81F701FFD8D5 /* Sources/ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToolsView.swift"; path = "Sources/ToolsView.swift"; sourceTree = SOURCE_ROOT; };
+		092ABFC48BD6E2CF94323013 /* Tests/CleanShieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CleanShieldTests.swift"; path = "Tests/CleanShieldTests.swift"; sourceTree = SOURCE_ROOT; };
+		29FBA42DC208E7453C9ED65E /* Widgets/CleanShieldWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CleanShieldWidgets.swift"; path = "Widgets/CleanShieldWidgets.swift"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92A35052B6D31D347FA222DA /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		0EBA621907A0EE080E43E08B /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		969CBFB952CEFEA7AB5F0D21 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		7C211ECAC0E53D577D7D42A8 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54E4BDA4ED6E0AFE753F81EA = {
+			isa = PBXGroup;
+			children = (
+				11AC819CEC295CFFF4A79414 /* Sources */,
+				A4BC89B6E43C4515FA49AE56 /* BlockerExtension */,
+				AAFA90E5E9A8E81779BC2947 /* Widgets */,
+				3225BDADE225316936E1610C /* Tests */,
+				CF6F81BA05FDD59812FAD8D2 /* Resources */,
+				037CD19DAB3AC9D621B056BE /* Config */,
+				EB621468A0107A0C2748E17C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11AC819CEC295CFFF4A79414 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				994D2E699E467ACF0D6EA347 /* Sources/AppState.swift */,
+				4116B51D9746D9EC867FF0DB /* Sources/AuditView.swift */,
+				09707D7F5ED9AB1CC3F7DDD7 /* Sources/CleanShieldApp.swift */,
+				085F95956DA7A994A119B7A3 /* Sources/PaywallSheet.swift */,
+				2FF514851E182F407EC11F73 /* Sources/SafariShieldView.swift */,
+				D987389DA2D00D8417986493 /* Sources/Shared/AuditCatalog.swift */,
+				98764518DEEC20F0555CC1E2 /* Sources/Shared/BlockerRuleCompiler.swift */,
+				6534DDAE1E330F6C36F053A9 /* Sources/Shared/PhotoPrivacyScrubber.swift */,
+				7F504D737C28861C2B26B618 /* Sources/Shared/SharedModels.swift */,
+				D592B6C79887020D414110F5 /* Sources/StoreManager.swift */,
+				8E74C64D015E81F701FFD8D5 /* Sources/ToolsView.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		A4BC89B6E43C4515FA49AE56 /* BlockerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7C37169EA0F0ABE4A6010075 /* BlockerExtension/ContentBlockerRequestHandler.swift */,
+				0BBA467E673AF49AADCC0D8A /* blockerList.json */,
+			);
+			name = BlockerExtension;
+			sourceTree = "<group>";
+		};
+		AAFA90E5E9A8E81779BC2947 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				29FBA42DC208E7453C9ED65E /* Widgets/CleanShieldWidgets.swift */,
+			);
+			name = Widgets;
+			sourceTree = "<group>";
+		};
+		3225BDADE225316936E1610C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				092ABFC48BD6E2CF94323013 /* Tests/CleanShieldTests.swift */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		CF6F81BA05FDD59812FAD8D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BECD89C5B4DC731E009D5F03 /* Assets.xcassets */,
+				3221D325F5A6DCA67804E682 /* PrivacyInfo.xcprivacy */,
+				E5F8EE8A5A54291A7BB971E3 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		037CD19DAB3AC9D621B056BE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7958A01042AB513569E303F7 /* Info.plist */,
+				AE8CFA038C41C0B43EC344A5 /* Blocker-Info.plist */,
+				21DD12A2BC8BB6ED9D13AFBC /* Widget-Info.plist */,
+				9A270BAD9DF77986D5BD27E8 /* CleanShield.entitlements */,
+				C1BC6C0E73FDBE64EAF6A402 /* CleanShieldBlocker.entitlements */,
+				D7E5641B961B9710298B98D4 /* CleanShieldWidgets.entitlements */,
+				5A3D1A5BCCA683E45E365AF1 /* CleanShield.storekit */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		EB621468A0107A0C2748E17C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E6B56320B278B456D87096E /* CleanShield.app */,
+				BF19CD8CA40EB9FBA1B83737 /* CleanShieldBlocker.appex */,
+				55E2E26C292A9A4CF2ADCB8E /* CleanShieldWidgets.appex */,
+				2ADBA66B679BFCF682ABDD4B /* CleanShieldTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26317FB7B0BFF1C9F916BA84 /* CleanShield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16789308F6F17145B13C3427;
+			buildPhases = (
+				FD4780216ED0BB102A4B878B /* Sources */,
+				92A35052B6D31D347FA222DA /* Frameworks */,
+				D23027D1F1377AFCF85B266D /* Resources */,
+				8F681387E1DED57575C34BA4 /* Embed Foundation Extensions */,
+			);
+			buildRules = ();
+			dependencies = (8D0562CAB9935DE7567D9EBD, D54B177C24D676B45636953E);
+			name = CleanShield;
+			productName = CleanShield;
+			productReference = 1E6B56320B278B456D87096E /* CleanShield.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B424062C580FD8AB3FE1428B /* CleanShieldBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 274FA23903B4B97BD9F0307C;
+			buildPhases = (
+				D2B08686BFCFDA9F8D44D106 /* Sources */,
+				0EBA621907A0EE080E43E08B /* Frameworks */,
+				3140231D8BB3A9F30043ED96 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = CleanShieldBlocker;
+			productName = CleanShieldBlocker;
+			productReference = BF19CD8CA40EB9FBA1B83737;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0D54080FDF1E4D248F51496E /* CleanShieldWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1093127CD072596FB09892F3;
+			buildPhases = (
+				55D17C21FF3BC1EA365D9916 /* Sources */,
+				969CBFB952CEFEA7AB5F0D21 /* Frameworks */,
+				F725252A22CDFE7D30DBF8AF /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = CleanShieldWidgets;
+			productName = CleanShieldWidgets;
+			productReference = 55E2E26C292A9A4CF2ADCB8E;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C51D49D0FBD8053834DAF47C /* CleanShieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 049EC0E9D15DD137A2251F20;
+			buildPhases = (
+				F1823E2E0707590C91C01FF4 /* Sources */,
+				7C211ECAC0E53D577D7D42A8 /* Frameworks */,
+				C046CD6991CBCA0EBBD05E87 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = (93BB304F8FF9CA30E7E2736D);
+			name = CleanShieldTests;
+			productName = CleanShieldTests;
+			productReference = 2ADBA66B679BFCF682ABDD4B;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E597709257EEDF1E2DF71251 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					26317FB7B0BFF1C9F916BA84 = { CreatedOnToolsVersion = 27.2; };
+					B424062C580FD8AB3FE1428B = { CreatedOnToolsVersion = 27.2; };
+					0D54080FDF1E4D248F51496E = { CreatedOnToolsVersion = 27.2; };
+					C51D49D0FBD8053834DAF47C = { CreatedOnToolsVersion = 27.2; TestTargetID = 26317FB7B0BFF1C9F916BA84; };
+				};
+			};
+			buildConfigurationList = 38F6063A6CF55E0E051C07C6;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = ("zh-Hans", en, Base);
+			mainGroup = 54E4BDA4ED6E0AFE753F81EA;
+			productRefGroup = EB621468A0107A0C2748E17C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26317FB7B0BFF1C9F916BA84 /* CleanShield */,
+				B424062C580FD8AB3FE1428B /* CleanShieldBlocker */,
+				0D54080FDF1E4D248F51496E /* CleanShieldWidgets */,
+				C51D49D0FBD8053834DAF47C /* CleanShieldTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D23027D1F1377AFCF85B266D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B65834F35D540C840C5E0A19 /* app_res::Assets.xcassets */,
+				C3A1117175ED7D7AD6C700E1 /* app_res::PrivacyInfo.xcprivacy */,
+				DE7E71C94BB982D3E411D1B0 /* app_res::InfoPlist.strings */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3140231D8BB3A9F30043ED96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				164DE80C4438619059B6D7F6 /* blocker_res::blockerList.json */,
+				F0F1FDCFFC56A6700BA95080 /* blocker_res::PrivacyInfo.xcprivacy */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F725252A22CDFE7D30DBF8AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB41A5EE842757540B1F7FC9 /* widget_res::PrivacyInfo.xcprivacy */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C046CD6991CBCA0EBBD05E87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FC38805AD7164DAB7BFA51 /* test_res::CleanShield.storekit */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD4780216ED0BB102A4B878B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD68B750907EFEFDA0EA698 /* Sources/AppState.swift */,
+				12BBAA120713F66789FE87BF /* Sources/AuditView.swift */,
+				38749758E566B498CDD36F0A /* Sources/CleanShieldApp.swift */,
+				7660015A69FF7CD2E9FC5D32 /* Sources/PaywallSheet.swift */,
+				5431A953693880EBC67BE9A3 /* Sources/SafariShieldView.swift */,
+				91F014078FEAA1A523CE4554 /* Sources/Shared/AuditCatalog.swift */,
+				584B1232C3F0FD38B345BCEF /* Sources/Shared/BlockerRuleCompiler.swift */,
+				21FD2C670CF18A64A596D903 /* Sources/Shared/PhotoPrivacyScrubber.swift */,
+				16F8FBC47618ABDC7533858A /* Sources/Shared/SharedModels.swift */,
+				A70FF372A8E11DC66DE46F35 /* Sources/StoreManager.swift */,
+				E5A5C6BB11728FA9F4D69EA4 /* Sources/ToolsView.swift */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B08686BFCFDA9F8D44D106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F42FAAF2552196F6CA6879B /* BlockerExtension/ContentBlockerRequestHandler.swift */,
+				8E6C53367E3E3D05B2C69F84 /* Sources/Shared/BlockerRuleCompiler.swift */,
+				238A548F34B8B42F17816379 /* Sources/Shared/SharedModels.swift */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D17C21FF3BC1EA365D9916 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE82BF892A285E3BB29E6163 /* Sources/Shared/AuditCatalog.swift */,
+				25978583B531D267485A2A58 /* Sources/Shared/SharedModels.swift */,
+				FF8193DB8416FCF7B930FD37 /* Widgets/CleanShieldWidgets.swift */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1823E2E0707590C91C01FF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F03F8A0E20FDD4233E55CD6 /* Tests/CleanShieldTests.swift */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D0562CAB9935DE7567D9EBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B424062C580FD8AB3FE1428B;
+			targetProxy = BB763E7DC30EC9C9A32A669A;
+		};
+		D54B177C24D676B45636953E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D54080FDF1E4D248F51496E;
+			targetProxy = 03B70AB1D64EBBD73FD8BA53;
+		};
+		93BB304F8FF9CA30E7E2736D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26317FB7B0BFF1C9F916BA84;
+			targetProxy = 5DAD052E7BA6DD021E22DAAF;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E5F8EE8A5A54291A7BB971E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABEE87EB562083D744113B79 /* zh-Hans */,
+				10C3F7F230FF37C74AB4A891 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F1A80C90B639869BA3D41B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU364788TC;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+			};
+			name = Debug;
+		};
+		AB76359ADF21CC4F8A78B40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU364788TC;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDFCCCFF9711F6368B25B1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Config/CleanShield.entitlements";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanghe.cleanshield;
+				PRODUCT_NAME = CleanShield;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+			};
+			name = Debug;
+		};
+		0E230146440A2A7F7FCCE0E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Config/CleanShield.entitlements";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanghe.cleanshield;
+				PRODUCT_NAME = CleanShield;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "CleanShield AppStore Dist";
+			};
+			name = Release;
+		};
+		0E9ECDB2EEC33174A0532E1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "Config/CleanShieldBlocker.entitlements";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/Blocker-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanghe.cleanshield.blocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+			};
+			name = Debug;
+		};
+		88EF8AD42C3A6470A0F12B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "Config/CleanShieldBlocker.entitlements";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/Blocker-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanghe.cleanshield.blocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "CleanShield Blocker AppStore Dist";
+			};
+			name = Release;
+		};
+		939C811669406074A4AFA992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "Config/CleanShieldWidgets.entitlements";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/Widget-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanghe.cleanshield.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+			};
+			name = Debug;
+		};
+		8A5ACA392D703152116CE801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "Config/CleanShieldWidgets.entitlements";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/Widget-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanghe.cleanshield.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "CleanShield Widgets AppStore Dist";
+			};
+			name = Release;
+		};
+		0BFCF59D24EA1A628D3AAFFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanghe.cleanshield.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanShield.app/CleanShield";
+			};
+			name = Debug;
+		};
+		0910F3A11B483DC7EBEB4A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanghe.cleanshield.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanShield.app/CleanShield";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38F6063A6CF55E0E051C07C6 /* Build configuration list for PBXProject CleanShield */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F1A80C90B639869BA3D41B5 /* Debug */,
+				AB76359ADF21CC4F8A78B40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16789308F6F17145B13C3427 /* Build configuration list for PBXNativeTarget CleanShield */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDFCCCFF9711F6368B25B1F5 /* Debug */,
+				0E230146440A2A7F7FCCE0E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		274FA23903B4B97BD9F0307C /* Build configuration list for PBXNativeTarget CleanShieldBlocker */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E9ECDB2EEC33174A0532E1A /* Debug */,
+				88EF8AD42C3A6470A0F12B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1093127CD072596FB09892F3 /* Build configuration list for PBXNativeTarget CleanShieldWidgets */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939C811669406074A4AFA992 /* Debug */,
+				8A5ACA392D703152116CE801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		049EC0E9D15DD137A2251F20 /* Build configuration list for PBXNativeTarget CleanShieldTests */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BFCF59D24EA1A628D3AAFFC /* Debug */,
+				0910F3A11B483DC7EBEB4A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E597709257EEDF1E2DF71251 /* Project object */;
+}

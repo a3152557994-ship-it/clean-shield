@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私政策 · Privacy Policy — 净盾 CleanShield</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", Roboto, sans-serif;
+      max-width: 780px; margin: 0 auto; padding: 32px 20px 64px;
+      line-height: 1.7; background: #0b1616; color: #e8f5f1;
+    }
+    .card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(50,235,175,0.22);
+      border-radius: 18px; padding: 24px; margin-bottom: 22px;
+    }
+    h1 { color: #3af2b2; margin-top: 0; font-size: 1.65rem; }
+    h2 { color: #7ef7cb; font-size: 1.15rem; margin-top: 22px; }
+    a { color: #3af2b2; }
+    .muted { color: #9ab8b0; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>净盾 CleanShield 隐私政策 (Privacy Policy)</h1>
+    <p class="muted">生效与最后更新日期 / Last Updated: 2026-11-19</p>
+    <p><strong>核心承诺（一句话版）：净盾 CleanShield 采用 100% 纯设备本地离线架构。我们不设任何业务采集服务器，不收集、不存储、不上传、也不出售您的任何浏览记录、相册照片、剪贴板或个人身份数据。</strong></p>
+
+    <h2>1. 数据零收集原则 (Zero Data Collection)</h2>
+    <ul>
+      <li><strong>Safari 网页拦截扩展</strong>：采用 Apple 官方原生声明式 <code>SFContentBlocker</code> 接口。过滤规则由 Safari 内核直接在本地执行，本应用及扩展既不申请“读取网页内容/密码”权限，也无法获知您访问过任何网址。</li>
+      <li><strong>照片定位与隐私抹除</strong>：仅在您主动通过系统相册选择器（<code>PhotosPicker</code>）挑选照片时，在手机本地内存中读取并剥离 EXIF/GPS 元数据，处理完立即释放，绝无任何云端上传行为。</li>
+      <li><strong>体检清单与到期提醒</strong>：您的体检勾选进度、自定义规则与桌面小组件配置仅保存在本机沙盒与 App Group（<code>group.com.yanghe.cleanshield</code>）本地存储中；180 天复检提醒由 iOS 本地通知（<code>UNUserNotificationCenter</code>）触发，不经过任何远程推送服务器。</li>
+    </ul>
+
+    <h2>2. 应用内购买与交易处理 (In-App Purchases)</h2>
+    <p>所有订阅与永久买断交易均直接通过 Apple 官方 App Store（<code>StoreKit 2</code>）安全完成。开发者不会接触或存储您的银行卡号、Apple ID 密码或账单地址。</p>
+
+    <h2>3. English Summary</h2>
+    <p><strong>CleanShield: AdBlock &amp; Privacy</strong> operates <strong>100% offline on your device</strong>. We do not collect, transmit, log, or sell any browsing history, personal identifiers, photos, or usage analytics. Safari content blocking uses Apple's declarative <code>SFContentBlocker</code> API, meaning CleanShield cannot read webpage contents, passwords, or URLs you visit. Photo GPS/EXIF scrubbing runs strictly in local device memory. All payments are processed directly by Apple via StoreKit 2.</p>
+
+    <h2>4. 联系我们 / Contact</h2>
+    <p>如对隐私保护有任何疑问，欢迎邮件联系：<a href="mailto:a3152557994@gmail.com">a3152557994@gmail.com</a> 或返回 <a href="./index.html">净盾 CleanShield 首页</a>。</p>
+  </div>
+</body>
+</html>

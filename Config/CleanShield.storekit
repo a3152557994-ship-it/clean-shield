@@ -1,0 +1,108 @@
+{
+  "identifier" : "8F4A2C1D",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "6.99",
+      "familyShareable" : true,
+      "internalID" : "CS_LIFE_001",
+      "localizations" : [
+        {
+          "description" : "一次买断永久解锁全部 30 项关广告图谱、防强跳规则与桌面组件",
+          "displayName" : "净盾 Pro 永久买断版",
+          "locale" : "zh_CN"
+        },
+        {
+          "description" : "One-time purchase for all 30+ guides, anti-jump rules & widgets",
+          "displayName" : "CleanShield Pro Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.yanghe.cleanshield.lifetime",
+      "referenceName" : "CleanShield Lifetime Unlock",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6890000001",
+    "_developerTeamID" : "KU364788TC",
+    "_lastSynchronizedDate" : 785246400
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "CS_PRO_GROUP",
+      "localizations" : [
+
+      ],
+      "name" : "CleanShield Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "CS_MON_001",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "按月解锁全部关广告图谱与自定义规则，可随时取消",
+              "displayName" : "净盾 Pro 月度订阅",
+              "locale" : "zh_CN"
+            },
+            {
+              "description" : "Monthly access to all Pro rules and privacy guides",
+              "displayName" : "CleanShield Pro Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.yanghe.cleanshield.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "CleanShield Monthly",
+          "subscriptionGroupID" : "CS_PRO_GROUP",
+          "type" : "AutoRenewingSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "3.99",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "CS_YR_001",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "按年解锁全部关广告图谱与自定义规则，折合每月仅 ¥1",
+              "displayName" : "净盾 Pro 年度订阅",
+              "locale" : "zh_CN"
+            },
+            {
+              "description" : "Annual access to all Pro rules and privacy guides",
+              "displayName" : "CleanShield Pro Yearly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.yanghe.cleanshield.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "CleanShield Yearly",
+          "subscriptionGroupID" : "CS_PRO_GROUP",
+          "type" : "AutoRenewingSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

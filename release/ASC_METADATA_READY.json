@@ -1,0 +1,105 @@
+{
+  "bundleId": "com.yanghe.cleanshield",
+  "sku": "CLEANSHIELD2026",
+  "version": "1.0.0",
+  "primaryCategory": "UTILITIES",
+  "secondaryCategory": "PRODUCTIVITY",
+  "inAppPurchases": {
+    "subscriptionGroup": "CleanShield Pro",
+    "monthly": {
+      "productId": "com.yanghe.cleanshield.monthly",
+      "referenceName": "CleanShield Monthly",
+      "cnPrice": "¥3.00",
+      "usPrice": "$0.99"
+    },
+    "yearly": {
+      "productId": "com.yanghe.cleanshield.yearly",
+      "referenceName": "CleanShield Yearly",
+      "cnPrice": "¥12.00",
+      "usPrice": "$3.99"
+    },
+    "lifetime": {
+      "productId": "com.yanghe.cleanshield.lifetime",
+      "referenceName": "CleanShield Lifetime Unlock",
+      "type": "NON_CONSUMABLE",
+      "cnPrice": "¥25.00",
+      "usPrice": "$6.99"
+    }
+  },
+  "localizations": {
+    "zh-Hans": {
+      "name": "净盾 - 广告拦截与隐私关闭助手",
+      "subtitle": "防摇一摇乱跳 · Safari网页去广告",
+      "keywords": "去广告,跳过广告,摇一摇,防监听,清净,网页净化,弹窗拦截,抹除定位,照片隐私,安全卫士,无痕浏览",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/",
+      "promotionalText": "100% 纯本地离线！3 分钟找齐系统与 30 大常用软件深藏的「摇一摇跳转」与「个性化广告」开关，内置零密码权限 Safari 网页拦截、民生免误杀白名单与发图抹定位工具。",
+      "description": "受够了走路晃一下手机就「摇一摇」跳进购物页？刚聊完什么马上满屏推同款广告？查个资料满屏悬浮牛皮癣弹窗、强迫打开 App 才给看全文？\n\n其实系统与各大软件内部都藏着官方关停开关，只是埋在 6～8 层菜单深处，甚至每满 180 天还会悄悄自动恢复开启。\n\n【净盾 CleanShield】用一套 100% 纯设备本地离线的工具箱，一次还你清爽安静的手机体验：\n\n1. 【隐私与防摇一摇关停体检台】\n• 一步一路径带打勾进度条：手把手带你切断传感器误触跳转、关闭跨应用追踪、封堵后台偷读剪贴板与系统隐藏「重要地点」记录。\n• 覆盖 30 项系统与高频日常软件深藏的个性化广告入口，支持一键复制搜索词与「180 天到期重关本地提醒」，告别半年后精准广告悄悄复活。\n\n2. 【零权限 Safari 网页净盾 + 26 项民生免误杀铁白名单】\n• 采用 Apple 官方原生静态过滤引擎（SFContentBlocker），绝不申请「读取网页密码与信用卡信息」高危权限，连开发者也无法知晓您访问过任何网页。\n• 出厂底层锁死导航地图、四大行、运营商与移动支付白名单，只拦牛皮癣弹窗与第三方追踪器，日常应用 100% 流畅不断网。\n\n3. 【发原图前 · 一键抹除照片 GPS 定位与拍摄隐私】\n• 发原图或传网盘前，1 秒检测照片内隐藏的精确家庭经纬度坐标、海拔与手机镜头型号，纯本地内存一键生成无定位干净副本。\n\n4. 【桌面一步直达小组件】\n• 长按主屏幕添加「净盾」小组件，跳过繁杂首页信息流，一步呼出扫一扫、付款码、乘车码与纯净搜索。\n\n【自动续期订阅与买断说明】\n• 核心系统体检向导、Safari 基础广告与追踪拦截、单张照片抹除定位永久免费开放，无任何内置广告。\n• 净盾 Pro 提供月度订阅（¥3/月）、年度订阅（¥12/年）及一次性永久买断版（¥25）。自动续期订阅将在到期前 24 小时内通过 Apple ID 扣费，可随时前往系统「设置 → Apple 账户 → 订阅」管理或取消。\n\n隐私政策 (Privacy Policy): https://a3152557994-ship-it.github.io/clean-shield/privacy.html\n使用条款 (Terms of Use / EULA): https://a3152557994-ship-it.github.io/clean-shield/terms.html"
+    },
+    "en-US": {
+      "name": "CleanShield: AdBlock & Privacy",
+      "subtitle": "Stop Trackers, Popups & EXIF",
+      "keywords": "blocker,safari,ads,banner,cookie,gps,metadata,scrubber,shield,clean,filter,security,offline,stealth",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/",
+      "promotionalText": "100% Offline Privacy Suite: Declarative Safari Content Blocker (zero password-read permission), 30-point hidden ad/sensor audit checklist, and 1-tap Photo GPS/EXIF scrubber.",
+      "description": "Tired of intrusive web banners, creepy cross-app ad retargeting, hidden motion-sensor redirects, and photos leaking your exact home GPS coordinates?\n\nCleanShield combines four 100% offline, on-device privacy defenses in one lightweight utility:\n\n1. Zero-Permission Safari Web Shield\n• Built on Apple's native declarative SFContentBlocker API—blocks annoying banners, popups, and third-party analytics trackers without ever requesting permission to read your passwords, credit cards, or browsing history.\n• Includes a built-in 26-domain Safe Whitelist (Maps, Banking, Carriers, Payments) evaluated last via ignore-previous-rules so essential services never break.\n\n2. 30-Point Privacy & Hidden Ad Switch Audit\n• Step-by-step interactive checklist to lock down motion sensors, cross-app tracking (ATT), silent clipboard snooping, Significant Locations, and deeply buried ad personalization toggles—complete with 180-day local reset reminders.\n\n3. Instant Photo GPS & EXIF Metadata Scrubber\n• Inspect hidden latitude/longitude, timestamp, and camera lens tags before sharing original photos, and save a clean metadata-free copy in one tap.\n\n4. Clean Direct-Launch Home Screen Widgets\n• Jump straight to QR scanners, payment passes, and tracker-free search right from your Home Screen.\n\nSubscriptions & Lifetime Unlock:\nCore audit checks, base Safari ad/tracker blocking, and single-photo GPS scrubbing are free forever with zero ads. Upgrade to CleanShield Pro via Monthly ($0.99/mo), Yearly ($3.99/yr), or One-Time Lifetime Unlock ($6.99). Auto-renewing subscriptions can be cancelled anytime at least 24 hours before renewal in Apple Account Settings.\n\nPrivacy Policy: https://a3152557994-ship-it.github.io/clean-shield/privacy.html\nTerms of Use (EULA): https://a3152557994-ship-it.github.io/clean-shield/terms.html"
+    },
+    "zh-Hant": {
+      "name": "淨盾 - 廣告攔截與隱私關閉助手",
+      "subtitle": "防搖一搖亂跳 · Safari網頁去廣告",
+      "keywords": "去廣告,跳過廣告,防監聽,網頁淨化,彈窗攔截,抹除定位,照片隱私,無痕瀏覽",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
+    },
+    "ja": {
+      "name": "CleanShield: 広告ブロック＆プライバシー保護",
+      "subtitle": "Safari広告消去・追跡防止・写真GPS削除",
+      "keywords": "広告ブロック,トラッカー,プライバシー,位置情報削除,EXIF,Safari拡張,オフライン",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
+    },
+    "ko": {
+      "name": "CleanShield: 광고 차단 및 개인정보 보호",
+      "subtitle": "Safari 팝업 차단 · 사진 GPS 위치 삭제",
+      "keywords": "광고차단,사파리,개인정보,추적방지,사진위치삭제,EXIF,오프라인",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
+    },
+    "de-DE": {
+      "name": "CleanShield: AdBlock & Schutz",
+      "subtitle": "Safari Werbeblocker & Foto-GPS",
+      "keywords": "werbeblocker,datenschutz,tracker,safari,exif,gps,banner,offline",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
+    },
+    "fr-FR": {
+      "name": "CleanShield: Bloqueur de Pubs",
+      "subtitle": "Anti-Trackers Safari & EXIF",
+      "keywords": "bloqueur,publicite,confidentialite,safari,gps,photo,exif,offline",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
+    },
+    "es-ES": {
+      "name": "CleanShield: Bloqueador y GPS",
+      "subtitle": "Sin Anuncios Safari y Privacidad",
+      "keywords": "bloqueador,anuncios,privacidad,safari,rastreadores,exif,gps,offline",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
+    },
+    "pt-BR": {
+      "name": "CleanShield: Bloqueador e GPS",
+      "subtitle": "Safari Sem Anúncios e EXIF",
+      "keywords": "bloqueador,anuncios,privacidade,safari,rastreadores,exif,gps,offline",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
+    },
+    "en-GB": {
+      "name": "CleanShield: AdBlock & Privacy",
+      "subtitle": "Stop Trackers, Popups & EXIF",
+      "keywords": "blocker,safari,ads,banner,cookie,gps,metadata,scrubber,shield,clean,filter,security,offline",
+      "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
+      "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
+    }
+  }
+}

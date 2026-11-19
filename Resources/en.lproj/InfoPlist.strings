@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "CleanShield";
+"CFBundleName" = "CleanShield";
+"NSPhotoLibraryUsageDescription" = "CleanShield only accesses photos you manually select to inspect and strip hidden GPS coordinates and camera EXIF metadata 100% offline.";
+"NSPhotoLibraryAddUsageDescription" = "CleanShield saves the scrubbed GPS-free clean photo copy to your Photo Library when requested.";

@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "净盾";
+"CFBundleName" = "净盾";
+"NSPhotoLibraryUsageDescription" = "净盾仅在您手动选择照片检测并抹除 GPS 定位与设备隐私信息时读取所选图片，全程 100% 本地离线处理。";
+"NSPhotoLibraryAddUsageDescription" = "净盾仅在您点击保存时，将抹除定位与拍摄参数后的安全照片副本写入系统相册。";

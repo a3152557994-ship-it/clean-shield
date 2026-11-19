@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>净盾 CleanShield — 6大手机品牌关广告 · 防摇一摇乱跳 · 防监听隐私体检台</title>
+  <meta name="description" content="100%纯本地离线：一键查清苹果iOS、小米澎湃、华为鸿蒙、OPPO、vivo、荣耀及30大常用App深藏的摇一摇跳转与个性化监听广告开关，附发图前抹除GPS定位工具。" />
+  <style>
+    :root {
+      --bg: #071313;
+      --card: #0f2120;
+      --card-hover: #142b29;
+      --border: rgba(58, 242, 178, 0.2);
+      --accent: #22e39c;
+      --accent-dark: #07291f;
+      --text: #ecfaf5;
+      --muted: #93b5ab;
+      --warn: #ffb020;
+      --danger: #ff5c6c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #10332d 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 72px;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 20px 16px; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 0 20px; border-bottom: 1px solid var(--border);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.2rem; }
+    .shield-badge {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, #22e39c, #0ea5e9);
+      color: #052019; display: grid; place-items: center; font-weight: 900;
+    }
+    .lang-btn {
+      background: rgba(255,255,255,0.08); color: var(--text);
+      border: 1px solid var(--border); border-radius: 999px;
+      padding: 6px 14px; cursor: pointer; font-weight: 700; font-size: 0.85rem;
+    }
+    .hero {
+      margin-top: 22px; padding: 24px; border-radius: 22px;
+      background: linear-gradient(135deg, rgba(22,88,72,0.72), rgba(12,30,42,0.85));
+      border: 1px solid rgba(58, 242, 178, 0.32);
+      display: grid; grid-template-columns: 1fr; gap: 18px;
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.78rem; font-weight: 700; color: var(--accent);
+      background: rgba(34,227,156,0.12); padding: 4px 12px; border-radius: 999px;
+    }
+    h1 { margin: 8px 0 6px; font-size: 1.65rem; line-height: 1.3; }
+    .sub { color: var(--muted); font-size: 0.95rem; margin: 0; }
+    .progress-bar {
+      width: 100%; height: 10px; background: rgba(255,255,255,0.1);
+      border-radius: 999px; overflow: hidden; margin-top: 8px;
+    }
+    .progress-fill {
+      height: 100%; width: 15%; background: linear-gradient(90deg, #22e39c, #38bdf8);
+      transition: width 0.3s ease;
+    }
+    .tabs {
+      display: flex; gap: 8px; overflow-x: auto; padding: 18px 0 10px;
+      scrollbar-width: none;
+    }
+    .tab-btn {
+      flex-shrink: 0; padding: 9px 15px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--card);
+      color: var(--text); font-weight: 700; font-size: 0.9rem; cursor: pointer;
+    }
+    .tab-btn.active {
+      background: var(--accent); color: var(--accent-dark); border-color: var(--accent);
+    }
+    .grid { display: grid; gap: 12px; margin-top: 8px; }
+    .step-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 16px; transition: background 0.2s;
+    }
+    .step-card.done { opacity: 0.62; border-color: rgba(34,227,156,0.45); }
+    .step-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .step-title { font-weight: 800; font-size: 1.02rem; margin: 0 0 4px; }
+    .step-pain { color: var(--muted); font-size: 0.85rem; margin: 0 0 10px; }
+    .path-box {
+      background: rgba(0,0,0,0.28); border-left: 3px solid var(--accent);
+      padding: 10px 12px; border-radius: 8px; font-size: 0.88rem;
+    }
+    .tag-warn {
+      display: inline-block; font-size: 0.75rem; font-weight: 700;
+      color: var(--warn); background: rgba(255,176,32,0.14);
+      padding: 2px 8px; border-radius: 999px; margin-top: 8px;
+    }
+    .check-btn {
+      flex-shrink: 0; border: 1px solid var(--accent); background: transparent;
+      color: var(--accent); border-radius: 999px; padding: 6px 12px;
+      font-weight: 700; font-size: 0.8rem; cursor: pointer;
+    }
+    .step-card.done .check-btn { background: var(--accent); color: var(--accent-dark); }
+    .dual-cta {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px; margin-top: 24px;
+    }
+    .cta-box {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 18px; padding: 20px;
+    }
+    .cta-box h3 { margin: 0 0 8px; font-size: 1.12rem; color: var(--accent); }
+    .btn-primary {
+      display: inline-block; margin-top: 12px; text-decoration: none;
+      background: var(--accent); color: var(--accent-dark);
+      font-weight: 800; padding: 10px 18px; border-radius: 12px; border: none; cursor: pointer;
+      font-size: 0.92rem;
+    }
+    .btn-outline {
+      display: inline-block; margin-top: 10px; text-decoration: none;
+      background: rgba(255,255,255,0.08); color: var(--text);
+      font-weight: 700; padding: 9px 15px; border-radius: 12px; border: 1px solid var(--border); cursor: pointer;
+      font-size: 0.88rem;
+    }
+    .scrubber-box {
+      margin-top: 24px; background: var(--card); border: 1px solid var(--border);
+      border-radius: 18px; padding: 20px;
+    }
+    footer {
+      margin-top: 36px; text-align: center; color: var(--muted); font-size: 0.84rem;
+    }
+    footer a { color: var(--accent); margin: 0 8px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="shield-badge">✓</div>
+        <span id="navTitle">净盾 CleanShield</span>
+      </div>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN / 中文</button>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="pill" id="heroPill">🛡️ 100% 纯本地离线 · 不上传任何隐私</span>
+        <h1 id="heroTitle">治好手机「走路晃一下跳淘宝」与「刚聊完啥就推啥广告」</h1>
+        <p class="sub" id="heroSub">官方早把关停开关做好了，只是藏在 6~8 层菜单里。选你的手机品牌，3 分钟挨个打勾关停，还手机一生清净。</p>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:0.86rem;font-weight:700;">
+          <span id="progLabel">当前手机清净完成度</span>
+          <span id="progPct">0%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progFill"></div></div>
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn-outline" onclick="exportPoster()" id="posterBtn">📸 一键保存本机防监听备忘卡 (PNG)</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs" id="brandTabs"></div>
+    <div class="grid" id="stepsGrid"></div>
+
+    <h2 style="margin:26px 0 8px;font-size:1.25rem;" id="commonAppHeading">🔥 全品牌必关：国民 App 深藏的「摇一摇 & 半年自动复活」开关</h2>
+    <div class="grid" id="appStepsGrid"></div>
+
+    <section class="scrubber-box">
+      <h3 style="margin:0 0 6px;color:var(--accent);" id="scrubTitle">📍 发原图前：浏览器本地一键抹除照片 GPS 定位（零上传）</h3>
+      <p class="sub" id="scrubDesc">微信发原图、网盘传照片会附带精确到小区楼栋的经纬度与拍摄手机型号。选一张照片直接在本地内存重绘剥离全部 EXIF 定位信息：</p>
+      <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+        <input type="file" id="photoInput" accept="image/*" style="font-size:0.88rem;" onchange="scrubPhoto(event)" />
+        <a id="downloadCleanLink" class="btn-primary" style="display:none;" download="clean-photo-no-gps.jpg">⬇️ 下载无定位纯净照片</a>
+      </div>
+      <p id="scrubStatus" style="font-size:0.85rem;color:var(--accent);margin:8px 0 0;"></p>
+    </section>
+
+    <section class="dual-cta">
+      <div class="cta-box">
+        <h3 id="iosCtaTitle">🍎 苹果 iPhone / iPad 专属：净盾 CleanShield App</h3>
+        <p class="sub" id="iosCtaDesc">内置 Safari 零密码权限网页拦截（锁死高德地图/四大行/10086 铁白名单绝不断网）、微信 180 天开关失效自动提醒、桌面一步直达扫码/乘车码小组件。</p>
+        <a class="btn-primary" href="#ios-app" onclick="alert(LANG==='zh'?'《净盾 CleanShield》iOS 1.0 已打包提交 App Store 审核，苹果用户可先使用上方全部免费关停路径与照片抹定位工具！':'CleanShield iOS v1.0 is rolling out on the App Store. Use all free interactive guides above right away!')" id="iosCtaBtn">获取 iOS 原生净盾 App</a>
+      </div>
+
+      <div class="cta-box">
+        <h3 id="andCtaTitle">🤖 安卓（小米/华为/OV/荣耀）免 Root 清净懒人包</h3>
+        <p class="sub" id="andCtaDesc">不用去应用商店受气！打包整理好《6 大国产系统深度关广告速查卡 + 电脑免 Root 安全冻结系统广告脚本 + 开源防误触规则与零误杀加密私人 DNS 配置指北》。</p>
+        <a class="btn-primary" href="./downloads/clean-shield-android-kit.zip" download id="andCtaBtn">📦 免费下载安卓清净配置包 (.zip)</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>100% On-Device Privacy · Zero Analytics · Zero Cloud Upload</p>
+      <p>
+        <a href="./privacy.html">隐私政策 Privacy Policy</a> ·
+        <a href="./terms.html">使用条款 Terms of Use (EULA)</a> ·
+        <a href="https://a3152557994-ship-it.github.io/opc-tools/">更多实用工具 OPC Tools</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    let LANG = (navigator.language || 'zh').toLowerCase().startsWith('zh') ? 'zh' : 'en';
+    let BRAND = /iphone|ipad|ipod|macintosh/i.test(navigator.userAgent) ? 'ios' : 'xiaomi';
+    const DONE = new Set(JSON.parse(localStorage.getItem('cs_done_v1') || '[]'));
+
+    const BRANDS = [
+      { id: 'ios', zh: '🍎 苹果 iPhone', en: '🍎 Apple iOS' },
+      { id: 'xiaomi', zh: '🟠 小米 / Redmi 澎湃', en: '🟠 Xiaomi HyperOS' },
+      { id: 'huawei', zh: '🔴 华为鸿蒙 HarmonyOS', en: '🔴 Huawei HarmonyOS' },
+      { id: 'oppo', zh: '🟢 OPPO / 一加 / 真我', en: '🟢 OPPO ColorOS' },
+      { id: 'vivo', zh: '🔵 vivo / iQOO', en: '🔵 vivo OriginOS' },
+      { id: 'honor', zh: '🟣 荣耀 MagicOS', en: '🟣 Honor MagicOS' }
+    ];
+
+    const BRAND_STEPS = {
+      ios: [
+        { id: 'ios_1', zhT: '切断「动作与健身」传感器（根治摇一摇乱跳！）', enT: 'Lock Motion Sensor (Stop Shake-to-Jump Ads)', zhP: '走路轻微晃动就从开屏跳去购物会场', enP: 'Stops gyroscope splash-screen redirects', zhPath: '【设置】→【隐私与安全性】→【运动与健身】→ 点【限制动作数据】勾选购物/资讯软件（或直接关掉它们的开关）', enPath: 'Settings → Privacy & Security → Motion & Fitness → Disable for shopping/news apps' },
+        { id: 'ios_2', zhT: '全局关闭「允许 App 请求跟踪」', enT: 'Turn Off Cross-App Tracking (ATT)', zhP: '防止在 A 软件搜完商品，B 软件立刻跟投同款广告', enP: 'Blocks cross-app IDFA behavioral retargeting', zhPath: '【设置】→【隐私与安全性】→【跟踪】→ 关闭【允许 App 请求跟踪】', enPath: 'Settings → Privacy & Security → Tracking → Toggle OFF' },
+        { id: 'ios_3', zhT: '关闭 Apple 个性化广告与「重要地点」行踪', enT: 'Disable Apple Personalized Ads & Significant Locations', zhP: '停止记录每天常去住址与商业账单画像', enP: 'Stops location history logging and ad profiling', zhPath: '1.【设置 → 隐私与安全性 → Apple 广告】关闭个性化广告；2.【定位服务 → 系统服务】关闭【重要地点】', enPath: 'Settings → Privacy & Security → Apple Advertising (OFF) & Location → System Services → Significant Locations (OFF)' },
+        { id: 'ios_4', zhT: '封堵后台静默读取「剪贴板」口令', enT: 'Block Silent Clipboard Reading', zhP: '复制聊天地址或文字后一打开软件就被偷偷读取', enP: 'Prevents apps from reading copied text on launch', zhPath: '【设置】→【App】→ 选择常用购物/资讯 App →【从其他 App 粘贴】改为【拒绝】或【询问】', enPath: 'Settings → Apps → Select App → Paste from Other Apps → Deny / Ask' }
+      ],
+      xiaomi: [
+        { id: 'xm_1', zhT: '澎湃 HyperOS 物理废掉「摇一摇广告」', enT: 'HyperOS: Revoke Device Motion Sensor', zhP: '一劳永逸废掉购物、云盘、资讯软件开屏摇一摇', enP: 'Physically disables shake-to-jump triggers per app', zhPath: '【设置】→【应用设置】→【授权管理 / 权限管理】→【权限】→【获取设备动作与方向】→ 把购物/视频/工具软件设为「拒绝」', enPath: 'Settings → Apps → Permissions → Device Motion & Orientation → Deny for shopping/news apps' },
+        { id: 'xm_2', zhT: '关停系统级广告总引擎「msa」', enT: 'Revoke System Ad Daemon (msa)', zhP: '系统自带应用开屏与推荐流的幕后总开关', enP: 'Disables Xiaomi system-wide ad service authorization', zhPath: '【设置】→ 顶栏搜【系统安全】或【撤销授权】→ 将【msa（MIUI/HyperOS 系统广告解决方案）】关闭（若提示失败连点 2 次即可撤销）', enPath: 'Settings → Passwords & Security → Authorization & Revocation → Turn OFF msa' },
+        { id: 'xm_3', zhT: '开启限制广告跟踪 + 清理天气/日历/文件夹推荐', enT: 'Disable Ad Tracking & Folder Recommendations', zhP: '桌面大文件夹底部「猜你喜欢」与天气下方流氓资讯', enP: 'Cleans built-in Weather, Calendar, and Folder promos', zhPath: '1.【设置 → 密码与安全 → 系统安全 → 广告服务】关闭个性化广告推荐；2. 点开桌面文件夹名称旁关闭【今日推荐】', enPath: 'Settings → Privacy/Security → Ad Services → Turn OFF Personalized Ads; tap folder title to hide Today Recommendations' }
+      ],
+      huawei: [
+        { id: 'hw_1', zhT: '鸿蒙 HarmonyOS 一键拦截「设备动作与摇一摇」', enT: 'HarmonyOS: Block Shake-to-Jump Sensor', zhP: '华为新系统自带摇一摇权限锁，关掉即刻清净', enP: 'Blocks gyroscope access used by splash-screen ads', zhPath: '【设置】→【隐私】→【权限管理】→【应用访问设备动作与方向】（或【摇一摇广告管理】）→ 逐一关闭购物与资讯类 App', enPath: 'Settings → Privacy → Permission Manager → Device Motion & Orientation → Disable for ad-heavy apps' },
+        { id: 'hw_2', zhT: '关闭系统级「个性化广告与跟踪」', enT: 'Disable System Ad ID & Tracking', zhP: '切断华为广告联盟跨应用兴趣画像', enP: 'Resets OAID and disables targeted ad profiling', zhPath: '【设置】→【隐私】→【广告与隐私】→ 开启【限制广告跟踪】并点击重置广告标识符', enPath: 'Settings → Privacy → Ads and Privacy → Enable Limit Ad Tracking' },
+        { id: 'hw_3', zhT: '关停负一屏资讯流与全局下拉搜索热榜广告', enT: 'Clean Minus-One Screen & Search Promos', zhP: '桌面右滑与下拉搜索满屏推广应用与八卦流', enP: 'Removes home-swipe news spam and promoted apps', zhPath: '桌面右滑进负一屏 → 点右上角头像 →【设置】→ 关闭【资讯】与【个性化推荐】；桌面下拉点右上角四点 →【设置】关闭热搜应用推荐', enPath: 'Swipe right → Profile → Settings → Turn OFF News Feed & Personalized Suggestions' }
+      ],
+      oppo: [
+        { id: 'op_1', zhT: 'ColorOS 切断「设备动作与方向」防摇一摇', enT: 'ColorOS: Cut Motion & Orientation Permission', zhP: '拿稳手机也跳走？把陀螺仪权限关掉立刻治好', enP: 'Stops shake-ads across OPPO / OnePlus / Realme', zhPath: '【设置】→【权限与隐私】→【权限管理】→【权限】→【设备动作与方向】→ 将电商、小说、短视频设为「不允许」', enPath: 'Settings → Privacy → Permission Manager → Device Motion & Orientation → Don\'t Allow' },
+        { id: 'op_2', zhT: '关闭系统广告跟踪与全局搜索推广', enT: 'Disable System Ad Tracking & Search Ads', zhP: '减少系统商店、浏览器与锁屏乐划推广', enP: 'Turns off system OAID targeting and lock-screen promos', zhPath: '1.【设置 → 权限与隐私 → 隐私 → 设备标识与广告】开启【限制广告追踪】；2.【设置 → 桌面与锁屏 → 乐划锁屏】关闭开关', enPath: 'Settings → Privacy → Device ID & Ads → Limit Ad Tracking ON; turn OFF Lock Screen Magazine' }
+      ],
+      vivo: [
+        { id: 'vv_1', zhT: 'OriginOS 封禁「访问设备动作与方向」传感器', enT: 'OriginOS: Block Motion & Orientation Sensor', zhP: '彻底拦截开屏扭一扭、晃一晃强行唤起购物软件', enP: 'Disables shake/tilt triggers on vivo & iQOO', zhPath: '【设置】→【隐私】→【权限管理】→【权限】→ 拉到底点【访问设备动作与方向】→ 批量关闭非运动类 App', enPath: 'Settings → Privacy → Permission Manager → Access Device Motion & Orientation → Turn OFF' },
+        { id: 'vv_2', zhT: '关闭个性化广告与全局搜索热门应用推荐', enT: 'Turn Off Personalized Ads & App Suggestions', zhP: '清退自带天气、日历、i管家底部广告条', enP: 'Cleans built-in utility banners and search ads', zhPath: '【设置】→【隐私】→【广告与隐私】→ 开启【个性化广告推荐】关闭项（打开限制广告跟踪），并在全局搜索设置关闭精选推荐', enPath: 'Settings → Privacy → Ads & Privacy → Limit Ad Tracking ON' }
+      ],
+      honor: [
+        { id: 'hn_1', zhT: '荣耀 MagicOS 切断「设备动作与方向」防误触跳转', enT: 'MagicOS: Block Shake-Ad Sensor Access', zhP: '走路、坐地铁刷手机不再莫名跳进电商大促页', enP: 'Stops gyroscope splash redirects on Honor phones', zhPath: '【设置】→【隐私】→【权限管理】→【应用访问设备动作与方向】→ 关闭购物、资讯、网盘软件权限', enPath: 'Settings → Privacy → Permission Manager → Device Motion & Orientation → Disable' },
+        { id: 'hn_2', zhT: '关闭限制广告跟踪与 YOYO 建议营销卡片', enT: 'Disable Ad Tracking & YOYO Promo Cards', zhP: '减少桌面建议卡片与负一屏商业推广', enP: 'Silences targeted system ads and promo cards', zhPath: '【设置】→【隐私】→【广告与隐私】→ 开启【限制广告跟踪】；长按桌面推广卡片点「不感兴趣/移除」', enPath: 'Settings → Privacy → Ads & Privacy → Enable Limit Ad Tracking' }
+      ]
+    };
+
+    const APP_STEPS = [
+      { id: 'app_wx', warnZh: '⚠️ 每 180 天会自动失效复活，记得半年复检！', warnEn: '⚠️ Auto-resets every 180 days!', zhT: '微信：双层彻底关停「朋友圈与看一看精准广告」', enT: 'WeChat: Dual-Layer Personalized Ad Opt-Out', zhP: '刚在群里聊到啥，朋友圈第 5 条立刻刷出对应广告', enP: 'Stops hyper-targeted Moments & Official Account ads', zhPath: '第一层：【我 → 设置 → 个人信息与权限 → 个性化广告管理】关闭；第二层：【设置 → 关于微信 → 底部《隐私保护指引》→ 我们如何使用信息 → 关于广告 → 管理】登录把开关全关灰！', enPath: 'Me → Settings → Personal Info & Permissions → Personalized Ads → OFF (plus Privacy Guide → About Ads → Manage)' },
+      { id: 'app_tb', warnZh: '', warnEn: '', zhT: '淘宝 / 闲鱼：关停程序化广告与麦克风权限', enT: 'Taobao / Xianyu: Turn Off Programmatic Ads & Mic', zhP: '防跨软件联动投喂与语音搜索权限常驻', enP: 'Cuts behavioral ad targeting and unneeded mic access', zhPath: '【我的 → 右上角设置 → 隐私 → 广告管理】关闭程序化/个性化广告，并在系统权限里关掉麦克风与通讯录', enPath: 'My Account → Settings → Privacy → Ad Management → Turn OFF' },
+      { id: 'app_dy', warnZh: '', warnEn: '', zhT: '抖音 / 快手：关闭程序化与个性化广告展示', enT: 'Douyin / Kuaishou: Disable Targeted Ad Stream', zhP: '减少直播间诱导带货与游戏广告精准追踪', enP: 'Reduces targeted ad insertions in short-video feeds', zhPath: '【我 → 右上角三条杠 → 设置 → 个人信息管理 / 了解与管理广告推送】将程序化与个性化广告展示全部关闭', enPath: 'Profile → Settings → Manage Ad Push → Turn OFF both toggles' },
+      { id: 'app_bd', warnZh: '', warnEn: '', zhT: '百度 / 百度网盘 / 微博：传感器断电 + 隐私关广告', enT: 'Baidu Netdisk & Weibo: Sensor Cut + Ad Opt-Out', zhP: '这类软件把开屏广告跟正文混在同一域名，网络拦截无效，断传感器最管用！', enP: 'Same-domain splash ads bypass DNS blockers; cutting motion sensor fixes shake-jumps 100%', zhPath: '1. 先按上方手机品牌步骤关掉它们的【动作与方向】权限；2. 进软件【设置 → 隐私设置 → 个性化广告管理】关闭开关', enPath: '1. Revoke Motion sensor in OS Settings; 2. In-app Settings → Privacy → Personalized Ads OFF' }
+    ];
+
+    function saveDone() {
+      localStorage.setItem('cs_done_v1', JSON.stringify([...DONE]));
+      updateProgress();
+    }
+
+    function toggleItem(id) {
+      if (DONE.has(id)) DONE.delete(id); else DONE.add(id);
+      saveDone();
+      render();
+    }
+
+    function updateProgress() {
+      const currentList = [...(BRAND_STEPS[BRAND] || []), ...APP_STEPS];
+      const doneCount = currentList.filter(x => DONE.has(x.id)).length;
+      const pct = Math.round((doneCount / Math.max(1, currentList.length)) * 100);
+      document.getElementById('progPct').textContent = pct + '% (' + doneCount + '/' + currentList.length + ')';
+      document.getElementById('progFill').style.width = Math.max(8, pct) + '%';
+    }
+
+    function toggleLang() {
+      LANG = (LANG === 'zh') ? 'en' : 'zh';
+      render();
+    }
+
+    function render() {
+      const zh = (LANG === 'zh');
+      document.getElementById('heroPill').textContent = zh ? '🛡️ 100% 纯本地离线 · 不上传任何隐私' : '🛡️ 100% On-Device Offline · Zero Data Uploaded';
+      document.getElementById('heroTitle').textContent = zh ? '治好手机「走路晃一下跳淘宝」与「刚聊完啥就推啥广告」' : 'Stop "Shake-to-Jump" Redirects & Creepy Targeted Phone Ads';
+      document.getElementById('heroSub').textContent = zh ? '官方早把关停开关做好了，只是藏在 6~8 层菜单里。选你的手机品牌，3 分钟挨个打勾关停，还手机一生清净。' : 'Phone makers hide ad & gyroscope switches 6 layers deep. Pick your phone brand below and turn them off in 3 minutes.';
+      document.getElementById('progLabel').textContent = zh ? '当前手机清净完成度' : 'Your Phone Privacy Hygiene';
+      document.getElementById('posterBtn').textContent = zh ? '📸 一键保存本机防监听备忘卡 (PNG)' : '📸 Export Checklist Card (PNG)';
+      document.getElementById('commonAppHeading').textContent = zh ? '🔥 全品牌必关：国民 App 深藏的「摇一摇 & 半年自动复活」开关' : '🔥 Must-Close Hidden Switches in Everyday Apps';
+      document.getElementById('scrubTitle').textContent = zh ? '📍 发原图前：浏览器本地一键抹除照片 GPS 定位（零上传）' : '📍 Local Photo GPS & EXIF Scrubber (Zero Upload)';
+      document.getElementById('scrubDesc').textContent = zh ? '发原图会附带精确到小区楼栋的经纬度与手机型号。选一张照片直接在浏览器本地重绘剥离全部 EXIF 定位信息：' : 'Original photos leak exact home GPS coordinates. Strip all EXIF metadata locally in your browser:';
+
+      const tabsEl = document.getElementById('brandTabs');
+      tabsEl.innerHTML = BRANDS.map(b => `
+        <button class="tab-btn ${b.id === BRAND ? 'active' : ''}" onclick="BRAND='${b.id}';render()">
+          ${zh ? b.zh : b.en}
+        </button>
+      `).join('');
+
+      const renderCards = (list) => list.map(item => {
+        const isDone = DONE.has(item.id);
+        const warn = zh ? item.warnZh : item.warnEn;
+        return `
+          <div class="step-card ${isDone ? 'done' : ''}">
+            <div class="step-top">
+              <div>
+                <p class="step-title">${zh ? item.zhT : item.enT}</p>
+                <p class="step-pain">${zh ? item.zhP : item.enP}</p>
+              </div>
+              <button class="check-btn" onclick="toggleItem('${item.id}')">
+                ${isDone ? (zh ? '已关 ✓' : 'Done ✓') : (zh ? '标记已关' : 'Mark Done')}
+              </button>
+            </div>
+            <div class="path-box">${zh ? item.zhPath : item.enPath}</div>
+            ${warn ? `<span class="tag-warn">${warn}</span>` : ''}
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('stepsGrid').innerHTML = renderCards(BRAND_STEPS[BRAND] || []);
+      document.getElementById('appStepsGrid').innerHTML = renderCards(APP_STEPS);
+      updateProgress();
+    }
+
+    function scrubPhoto(ev) {
+      const file = ev.target.files && ev.target.files[0];
+      if (!file) return;
+      const img = new Image();
+      const url = URL.createObjectURL(file);
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0);
+        canvas.toBlob(blob => {
+          URL.revokeObjectURL(url);
+          const cleanUrl = URL.createObjectURL(blob);
+          const link = document.getElementById('downloadCleanLink');
+          link.href = cleanUrl;
+          link.style.display = 'inline-block';
+          document.getElementById('scrubStatus').textContent = LANG === 'zh'
+            ? `✓ 已在本地剥离全部 GPS 经纬度与拍摄参数（分辨率保持 ${canvas.width}×${canvas.height}），点击上方按钮保存！`
+            : `✓ All GPS & EXIF metadata stripped locally (${canvas.width}x${canvas.height}). Click above to save!`;
+        }, 'image/jpeg', 0.94);
+      };
+      img.src = url;
+    }
+
+    function exportPoster() {
+      const c = document.createElement('canvas');
+      c.width = 1080; c.height = 1440;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createLinearGradient(0, 0, 0, 1440);
+      grad.addColorStop(0, '#0a2e26'); grad.addColorStop(1, '#071315');
+      ctx.fillStyle = grad; ctx.fillRect(0, 0, 1080, 1440);
+
+      ctx.fillStyle = '#22e39c'; ctx.font = 'bold 52px -apple-system, PingFang SC, sans-serif';
+      ctx.fillText('🛡️ 净盾 CleanShield 手机清净备忘卡', 70, 120);
+      const bObj = BRANDS.find(b => b.id === BRAND) || BRANDS[0];
+      ctx.fillStyle = '#ecfaf5'; ctx.font = 'bold 36px -apple-system, PingFang SC, sans-serif';
+      ctx.fillText('当前机型路线：' + bObj.zh, 70, 190);
+
+      const list = [...(BRAND_STEPS[BRAND] || []), ...APP_STEPS];
+      let y = 270;
+      list.forEach((it, idx) => {
+        ctx.fillStyle = 'rgba(255,255,255,0.07)';
+        ctx.fillRect(60, y - 44, 960, 132);
+        ctx.fillStyle = DONE.has(it.id) ? '#22e39c' : '#ffb020';
+        ctx.font = 'bold 30px -apple-system, PingFang SC, sans-serif';
+        ctx.fillText((DONE.has(it.id) ? '[已关✓] ' : '[待关] ') + (idx + 1) + '. ' + it.zhT, 84, y);
+        ctx.fillStyle = '#b4cfc7';
+        ctx.font = '24px -apple-system, PingFang SC, sans-serif';
+        ctx.fillText(it.zhPath.slice(0, 38) + (it.zhPath.length > 38 ? '...' : ''), 84, y + 50);
+        y += 152;
+      });
+      ctx.fillStyle = '#22e39c'; ctx.font = '26px -apple-system, PingFang SC, sans-serif';
+      ctx.fillText('在线免费查全品牌开关：a3152557994-ship-it.github.io/clean-shield/', 70, 1385);
+
+      const a = document.createElement('a');
+      a.download = 'CleanShield-' + BRAND + '-checklist.png';
+      a.href = c.toDataURL('image/png');
+      a.click();
+    }
+
+    render();
+  </script>
+</body>
+</html>

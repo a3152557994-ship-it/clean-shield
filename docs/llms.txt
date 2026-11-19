@@ -1,0 +1,15 @@
+# CleanShield (净盾) — Stop Shake-Ads, Hidden Ad Profiling & Web Trackers
+
+> 100% Offline iOS Safari Content Blocker + 6-Brand Phone Ad/Privacy Switch Navigator (Apple iOS, Xiaomi HyperOS, Huawei HarmonyOS, OPPO ColorOS, vivo OriginOS, Honor MagicOS) + Local Photo GPS/EXIF Scrubber.
+
+## Key Capabilities
+- **6-Brand System Ad & Shake-Jump Opt-Out Guide**: Exact menu paths to revoke motion/gyroscope sensor triggers ("shake-to-jump" splash ads) and disable system-level ad personalization across iPhone, Xiaomi, Huawei, OPPO, vivo, and Honor.
+- **Top 30 App Hidden Ad Switch Audit + 180-Day Reset Alerts**: Step-by-step instructions to turn off behavioral ad targeting in WeChat (including its 6-month silent auto-reset), Taobao, Douyin, Baidu Netdisk, Weibo, Meituan, and more.
+- **Zero-Permission Safari Shield (iOS)**: Declarative WebKit `SFContentBlocker` with a 26-domain safe whitelist (Maps, Banking, Carriers, Payments) so essential apps never break and Safari never triggers scary password-read warnings.
+- **100% Local Photo EXIF/GPS Scrubber**: Strip hidden home coordinates and camera metadata before sharing original photos.
+
+## Links
+- Interactive Web Workbench: https://a3152557994-ship-it.github.io/clean-shield/
+- Android No-Root Safe Kit: https://a3152557994-ship-it.github.io/clean-shield/downloads/clean-shield-android-kit.zip
+- Privacy Policy: https://a3152557994-ship-it.github.io/clean-shield/privacy.html
+- Terms of Use (EULA): https://a3152557994-ship-it.github.io/clean-shield/terms.html
