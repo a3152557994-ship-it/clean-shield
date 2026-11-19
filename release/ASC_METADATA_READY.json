@@ -42,7 +42,7 @@
       "keywords": "blocker,safari,ads,banner,cookie,gps,metadata,scrubber,shield,clean,filter,security,offline,stealth",
       "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
       "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/",
-      "promotionalText": "100% Offline Privacy Suite: Declarative Safari Content Blocker (zero password-read permission), 30-point hidden ad/sensor audit checklist, and 1-tap Photo GPS/EXIF scrubber.",
+      "promotionalText": "100% Offline Privacy Suite: Zero-permission Safari Content Blocker, 30-point hidden ad & motion-sensor audit, and 1-tap Photo GPS/EXIF metadata scrubber.",
       "description": "Tired of intrusive web banners, creepy cross-app ad retargeting, hidden motion-sensor redirects, and photos leaking your exact home GPS coordinates?\n\nCleanShield combines four 100% offline, on-device privacy defenses in one lightweight utility:\n\n1. Zero-Permission Safari Web Shield\n• Built on Apple's native declarative SFContentBlocker API—blocks annoying banners, popups, and third-party analytics trackers without ever requesting permission to read your passwords, credit cards, or browsing history.\n• Includes a built-in 26-domain Safe Whitelist (Maps, Banking, Carriers, Payments) evaluated last via ignore-previous-rules so essential services never break.\n\n2. 30-Point Privacy & Hidden Ad Switch Audit\n• Step-by-step interactive checklist to lock down motion sensors, cross-app tracking (ATT), silent clipboard snooping, Significant Locations, and deeply buried ad personalization toggles—complete with 180-day local reset reminders.\n\n3. Instant Photo GPS & EXIF Metadata Scrubber\n• Inspect hidden latitude/longitude, timestamp, and camera lens tags before sharing original photos, and save a clean metadata-free copy in one tap.\n\n4. Clean Direct-Launch Home Screen Widgets\n• Jump straight to QR scanners, payment passes, and tracker-free search right from your Home Screen.\n\nSubscriptions & Lifetime Unlock:\nCore audit checks, base Safari ad/tracker blocking, and single-photo GPS scrubbing are free forever with zero ads. Upgrade to CleanShield Pro via Monthly ($0.99/mo), Yearly ($3.99/yr), or One-Time Lifetime Unlock ($6.99). Auto-renewing subscriptions can be cancelled anytime at least 24 hours before renewal in Apple Account Settings.\n\nPrivacy Policy: https://a3152557994-ship-it.github.io/clean-shield/privacy.html\nTerms of Use (EULA): https://a3152557994-ship-it.github.io/clean-shield/terms.html"
     },
     "zh-Hant": {
@@ -82,7 +82,7 @@
     },
     "es-ES": {
       "name": "CleanShield: Bloqueador y GPS",
-      "subtitle": "Sin Anuncios Safari y Privacidad",
+      "subtitle": "Bloqueador Safari y Privacidad",
       "keywords": "bloqueador,anuncios,privacidad,safari,rastreadores,exif,gps,offline",
       "privacyPolicyUrl": "https://a3152557994-ship-it.github.io/clean-shield/privacy.html",
       "supportUrl": "https://a3152557994-ship-it.github.io/clean-shield/"
