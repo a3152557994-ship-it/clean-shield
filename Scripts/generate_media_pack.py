@@ -30,10 +30,12 @@ FONT_CANDIDATES = [
 
 
 def load_font(size: int, index: int = 0) -> ImageFont.FreeTypeFont:
+    # In PingFang.ttc: index 3 = PingFang SC Regular, index 11 = PingFang SC Semibold
+    sc_index = 11 if index >= 1 else 3
     for fp in FONT_CANDIDATES:
         if Path(fp).exists():
             try:
-                return ImageFont.truetype(fp, size, index=index)
+                return ImageFont.truetype(fp, size, index=sc_index)
             except Exception:
                 try:
                     return ImageFont.truetype(fp, size, index=0)
