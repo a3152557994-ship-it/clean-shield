@@ -23,8 +23,9 @@ MEDIA_ROOT = Path("/Users/wang/OPC/media/20261119-clean-shield")
 RELEASE_DIR = Path("/Users/wang/OPC/projects/clean-shield/release")
 
 FONT_CANDIDATES = [
-    "/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/Resources/Reserved/PingFangUI.ttc",
     "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+    "/System/Library/Fonts/STHeiti Medium.ttc",
+    "/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/Resources/Reserved/PingFangUI.ttc",
 ]
 
 
@@ -121,12 +122,12 @@ def render_appstore_board(raw_shot: Path, badge: str, headline1: str, headline2:
     f_h1 = load_font(74, index=1)
     f_sub = load_font(40, index=0)
 
-    # Pill badge
+    # Pill badge (high-contrast dark emerald fill with bright mint text)
     bbox = draw.textbbox((0, 0), badge, font=f_badge)
-    bw = (bbox[2] - bbox[0]) + 64
+    bw = (bbox[2] - bbox[0]) + 68
     bx = (W - bw) // 2
-    draw.rounded_rectangle((bx, 110, bx + bw, 184), radius=37, fill=(34, 227, 156, 42), outline=(58, 242, 178, 150), width=3)
-    draw.text((W // 2, 147), badge, font=f_badge, fill=(78, 250, 188), anchor="mm")
+    draw.rounded_rectangle((bx, 110, bx + bw, 184), radius=37, fill=(14, 72, 58, 255), outline=(82, 250, 190, 220), width=3)
+    draw.text((W // 2, 147), badge, font=f_badge, fill=(110, 255, 202), anchor="mm")
 
     draw.text((W // 2, 265), headline1, font=f_h1, fill=(255, 255, 255), anchor="mm")
     draw.text((W // 2, 360), headline2, font=f_h1, fill=(82, 250, 190), anchor="mm")
@@ -212,11 +213,11 @@ def render_xhs_and_xianyu(shots: dict[str, Path]) -> None:
     dx.text((100, 235), "手机去广告 & 防摇一摇", font=load_font(74, 1), fill=(255, 255, 255))
     dx.text((100, 340), "全套懒人清净配置包", font=load_font(74, 1), fill=(82, 250, 190))
     bullets = [
-        "✓ 覆盖小米澎湃 / 华为鸿蒙 / OPPO / vivo / 荣耀 / 苹果",
-        "✓ 3 分钟彻底废掉开屏「摇一摇乱跳购物页」",
-        "✓ 30 大软件隐藏监听与个性化广告开关一步一图",
-        "✓ 附加密私人 DNS 零误杀白名单 + 电脑一键停用广告脚本",
-        "✓ 拍下秒发全套离线图文包 + 在线一键寻路工具直链",
+        "● 覆盖小米澎湃 / 华为鸿蒙 / OPPO / vivo / 荣耀 / 苹果",
+        "● 3 分钟彻底废掉开屏「摇一摇乱跳购物页」",
+        "● 30 大软件隐藏监听与个性化广告开关一步一图",
+        "● 附加密私人 DNS 零误杀白名单 + 电脑一键停用广告脚本",
+        "● 拍下秒发全套离线图文包 + 在线一键寻路工具直链",
     ]
     by = 490
     for b in bullets:
